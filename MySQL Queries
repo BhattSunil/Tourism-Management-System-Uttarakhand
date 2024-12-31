@@ -1,0 +1,40 @@
+create database travelmgmtsystem;
+show databases;
+use travelmgmtsystem;
+create table account(username varchar(20),name varchar(20),password varchar(20),security varchar(100), answer varchar(50));
+show tables;
+select * from account;
+use travelmgmtsystem;
+CREATE TABLE customer (
+    username VARCHAR(50) PRIMARY KEY,
+    id_type VARCHAR(50) NOT NULL,
+    id_number VARCHAR(50) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    gender VARCHAR(10) CHECK (gender IN ('Male', 'Female')),
+    country VARCHAR(100),
+    address VARCHAR(255),
+    phone VARCHAR(20),
+    email VARCHAR(100)
+);
+ALTER TABLE account DROP PRIMARY KEY;
+show tables;
+select * from customer;
+SHOW CREATE TABLE customer;
+ALTER TABLE customer DROP PRIMARY KEY;
+show databases;
+use travelmgmtsystem;
+show tables;
+select * from customer ;
+DROP TABLE IF EXISTS customer;
+CREATE TABLE customer (
+    username VARCHAR(50) P,
+    id VARCHAR(50),
+    number VARCHAR(50),
+    name VARCHAR(100),
+    gender VARCHAR(10),
+    country VARCHAR(50),
+    address VARCHAR(255),
+    phone VARCHAR(20),
+    email VARCHAR(100)
+);
+
